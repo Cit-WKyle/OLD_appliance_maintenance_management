@@ -1,9 +1,0 @@
-Do appliance-status service.
-Add additional methods to other services off use cases.
-Test endpoints with postman.
-Do next services
-Complete all services
-Integrate android application
-Do analytics services
-Style android application
-Web application for analytics
