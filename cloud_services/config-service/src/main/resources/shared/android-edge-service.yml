@@ -1,0 +1,32 @@
+server:
+  port: 8200
+  
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
+
+zuul:
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+  routes:
+    account-service: /api/account/**
+    property-service: /api/property/**
+    appliance-service: /api/appliance/**
+    property-appliance-service: /api/property-appliance/**
+    property-tenant-service: /api/property-tenant/**
+    diagnostic-report-service: /api/diagnostic-report/**
+    maintenance-organisation-service: /api/maintenance-organisation/**
+  
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://discovery-service:8101/eureka

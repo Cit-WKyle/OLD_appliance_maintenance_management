@@ -1,0 +1,36 @@
+server.port: 8400
+spring.profiles: default
+auth.security.jwt:
+  tokenExpirationTime: 15
+  refreshTokenExpTime: 60
+  tokenIssuer: http://kyle.ie
+  tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
+  
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddlAuto: create
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://account-db:5432/account
+    username: account_db
+    password: account_pw
+    driverClassName: org.postgresql.Driver
+    
+#amazon:
+#  rds:
+#    dbName: account
+#    dbInstanceId: account-db
+#    username: account_db
+#    password: account_pw
+#  aws:
+#    accesskey: AKIAJ6HL5CWG4TPJK4EQ
+#    secretkey: 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
+#    region: eu-west-1
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://discovery-service:8101/eureka

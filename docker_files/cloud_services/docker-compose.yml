@@ -1,0 +1,114 @@
+version: '2'
+services:
+  rabbitmq:
+    image: rabbitmq
+    ports:
+      - "5672:5672"
+
+  account-db:
+    image: postgres
+    environment:
+      POSTGRES_USER: 'account_db'
+      POSTGRES_PASSWORD: 'account_pw'
+      POSTGRES_DB: 'account'
+    ports:
+      - "5432:5432"
+
+  config-service:
+    build: config-service
+    restart: always
+    ports:
+      - "8100:8100"
+
+  discovery-service:
+    build: discovery-service
+    restart: always
+    ports:
+      - "8101:8101"
+
+  hystrix-dashboard-service:
+    build: hystrix-dashboard-service
+    restart: always
+    ports:
+      - "8102:8102"
+
+  turbine-stream-service:
+    build: turbine-stream-service
+    restart: always
+    ports:
+      - "8103:8103"
+      - "8300:8300"
+      - "8301:8301"
+
+  android-edge-service:
+    build: android-edge-service
+    restart: always
+    ports:
+      - "8200:8200"
+
+  analytics-web-edge-service:
+    build: analytics-web-edge-service
+    restart: always
+    ports:
+      - "8201:8201"
+
+  account-service:
+    build: account-service
+    restart: always
+    ports:
+      - "8400:8400"
+
+  property-service:
+    build: property-service
+    restart: always
+    ports:
+      - "8401:8401"
+
+  appliance-service:
+    build: appliance-service
+    restart: always
+    ports:
+      - "8402:8402"
+
+  property-appliance-service:
+    build: property-appliance-service
+    restart: always
+    ports:
+      - "8403:8403"
+
+  appliance-status-service:
+    build: appliance-status-service
+    restart: always
+    ports:
+      - "8404:8404"
+
+  appliance-status-notification-service:
+    build: appliance-status-notification-service
+    restart: always
+    ports:
+      - "8405:8405"
+      - "8302:8302"
+
+  property-tenant-service:
+    build: property-tenant-service
+    restart: always
+    ports:
+      - "8406:8406"
+
+  diagnostic-report-service:
+    build: diagnostic-report-service
+    restart: always
+    ports:
+      - "8407:8407"
+
+  maintenance-organisation-service:
+    build: maintenance-organisation-service
+    restart: always
+    ports:
+      - "8408:8408"
+
+  analytics-web-portal-service:
+    build: analytics-web-portal-service
+    restart: always
+    ports:
+      - "8500:8500"

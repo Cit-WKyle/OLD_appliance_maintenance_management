@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.kyle.ie</groupId>
+  <artifactId>cloud-service-build</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>../../cloud_services/config-service</module>
+    <module>../../cloud_services/discovery-service</module>
+    <module>../../cloud_services/android-edge-service</module>
+    <module>../../cloud_services/analytics-web-edge-service</module>
+    <module>../../cloud_services/hystrix-dashboard-service</module>
+    <module>../../cloud_services/turbine-stream-service</module>
+    <module>../../cloud_services/analytics-web-portal-service</module>
+    <module>../../cloud_services/account-service</module>
+    <module>../../cloud_services/property-service</module>
+    <module>../../cloud_services/appliance-service</module>
+    <module>../../cloud_services/property-appliance-service</module>
+    <module>../../cloud_services/appliance-status-service</module>
+    <module>../../cloud_services/appliance-status-notification-service</module>
+    <module>../../cloud_services/property-tenant-service</module>
+    <module>../../cloud_services/diagnostic-report-service</module>
+    <module>../../cloud_services/maintenance-organisation-service</module>
+  </modules>
+</project>

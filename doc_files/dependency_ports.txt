@@ -1,0 +1,10 @@
+===============================
+Dependency Ports:
+Hostname - Localhost
+===============================
+
+rabbit-mq:
+5672
+
+postgresql:
+5432

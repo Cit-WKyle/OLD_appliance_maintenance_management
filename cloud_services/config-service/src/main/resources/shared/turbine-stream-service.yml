@@ -1,0 +1,18 @@
+server:
+  port: 8103
+
+turbine:
+  stream:
+    port: 8300
+
+management:
+  port: 8301
+  
+spring:
+  rabbitmq:
+    host: rabbitmq
+  
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://discovery-service:8101/eureka

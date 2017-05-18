@@ -1,0 +1,12 @@
+server.port: 8404
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://discovery-service:8101/eureka
+amazon:
+  dynamodb:
+    endpoint: http://dynamodb.eu-west-1.amazonaws.com/
+  aws:
+    accesskey: AKIAJ6HL5CWG4TPJK4EQ
+    secretkey: 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

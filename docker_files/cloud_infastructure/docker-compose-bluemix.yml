@@ -1,0 +1,95 @@
+rabbitmq:
+  image: registry.eu-gb.bluemix.net/dev_docker/rabbitmq
+  mem_limit: 64
+  ports:
+    - "5672:5672"
+account-db:
+  image: registry.eu-gb.bluemix.net/dev_docker/postgres
+  environment:
+    POSTGRES_USER: 'account_db'
+    POSTGRES_PASSWORD: 'account_pw'
+    POSTGRES_DB: 'account'
+  mem_limit: 64
+  ports:
+    - "5432:5432"
+config-service:
+  image: registry.eu-gb.bluemix.net/dev_docker/config-service
+  restart: always
+  mem_limit: 64
+  ports:
+    - "8100:8100"
+discovery-service:
+  image: registry.eu-gb.bluemix.net/dev_docker/discovery-service
+  restart: always
+  mem_limit: 64
+  ports:
+    - "8101:8101"
+hystrix-dashboard-service:
+  image: registry.eu-gb.bluemix.net/dev_docker/hystrix-dashboard-service
+  restart: always
+  mem_limit: 64
+  ports:
+    - "8102:8102"
+turbine-stream-service:
+  image: registry.eu-gb.bluemix.net/dev_docker/turbine-stream-service
+  restart: always
+  mem_limit: 64
+  ports:
+    - "8103:8103"
+    - "8300:8300"
+    - "8301:8301"
+android-edge-service:
+  image: registry.eu-gb.bluemix.net/dev_docker/android-edge-service
+  restart: always
+  mem_limit: 64
+  ports:
+    - "8200:8200"
+analytics-web-edge-service:
+  image: registry.eu-gb.bluemix.net/dev_docker/analytics-web-edge-service
+  restart: always
+  mem_limit: 64
+  ports:
+    - "8201:8201"
+account-service:
+  image: registry.eu-gb.bluemix.net/dev_docker/account-service
+  restart: always
+  mem_limit: 64
+  ports:
+    - "8400:8400"
+property-service:
+  image: registry.eu-gb.bluemix.net/dev_docker/property-service
+  restart: always
+  mem_limit: 64
+  ports:
+    - "8401:8401"
+appliance-service:
+  image: registry.eu-gb.bluemix.net/dev_docker/appliance-service
+  restart: always
+  mem_limit: 64
+  ports:
+    - "8402:8402"
+property-appliance-service:
+  image: registry.eu-gb.bluemix.net/dev_docker/property-appliance-service
+  restart: always
+  mem_limit: 64
+  ports:
+    - "8403:8403"
+appliance-status-service:
+  image: registry.eu-gb.bluemix.net/dev_docker/appliance-status-service
+  restart: always
+  mem_limit: 64
+  ports:
+    - "8404:8404"
+appliance-status-notification-service:
+  image: registry.eu-gb.bluemix.net/dev_docker/appliance-status-notification-service
+  restart: always
+  mem_limit: 64
+  ports:
+    - "8405:8405"
+    - "8302:8302"
+analytics-web-portal-service:
+  image: registry.eu-gb.bluemix.net/dev_docker/analytics-web-portal-service
+  restart: always
+  mem_limit: 64
+  ports:
+    - "8500:8500"

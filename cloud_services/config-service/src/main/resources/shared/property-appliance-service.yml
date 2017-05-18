@@ -1,0 +1,37 @@
+server.port: 8403
+
+service:
+  notification:
+    url: http://appliance-status-notification-service:8405/
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://discovery-service:8101/eureka
+spring:
+  rabbitmq:
+    host: rabbitmq
+
+amazon:
+  dynamodb:
+    endpoint: http://dynamodb.eu-west-1.amazonaws.com/
+  aws:
+    accesskey: AKIAJ6HL5CWG4TPJK4EQ
+    secretkey: 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
+    
+hystrix:
+ threadpool.default.coreSize: "20"
+ threadpool.default.maxQueueSize: "1000000"
+ threadpool.default.keepAliveTimeMinutes: "2"
+ threadpool.default.queueSizeRejectionThreshold: "1000000"
+ command:
+   default:
+     fallback.isolation.semaphore.maxConcurrentRequests: "20"
+     execution:
+       timeout:
+         enabled: "false"
+       isolation:
+         strategy: "THREAD"
+         thread:
+           timeoutInMilliseconds: "100000"
+    

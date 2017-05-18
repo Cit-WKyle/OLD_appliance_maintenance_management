@@ -1,0 +1,6 @@
+curl "https://www.mockaroo.com/51f849e0/download?count=150&key=2fd05220" > "./src/dummy_data/DishWasher.json"
+curl "https://www.mockaroo.com/dfce8e50/download?count=150&key=2fd05220" > "./src/dummy_data/WashingMachine.json"
+curl "https://www.mockaroo.com/122bee80/download?count=150&key=2fd05220" > "./src/dummy_data/FridgeFreezer.json"
+curl "https://www.mockaroo.com/6f9586b0/download?count=150&key=2fd05220" > "./src/dummy_data/Microwave.json"
+curl "https://www.mockaroo.com/f17caa50/download?count=150&key=2fd05220" > "./src/dummy_data/Oven.json"
+curl "https://www.mockaroo.com/8a619140/download?count=150&key=2fd05220" > "./src/dummy_data/TumbleDryer.json"
